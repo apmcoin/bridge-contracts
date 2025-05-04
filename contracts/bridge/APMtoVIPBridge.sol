@@ -1,10 +1,16 @@
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.20;
 
-import {IERC20} from "../openzeppelin-contracts-v5.0/contracts/token/ERC20/IERC20.sol";
+import {IERC20} from "../openzeppelin-contracts-5.0.0/token/ERC20/IERC20.sol";
+import {VIP} from "../token/VIP.sol";
 
 contract APMToVIPBridge {
     IERC20 public immutable ERC20_APM = IERC20(0x8EB4029afd486f69e749ee172748582C2877aaAB);
+    VIP public immutable VIP_TOKEN;
+    
+    constructor(address _vip) {
+        VIP_TOKEN = VIP(_vip);
+    }
     
     /**
      * @notice IMPORTANT: Only events after 32 confirmations are considered valid for bridge processing
@@ -35,4 +41,4 @@ contract APMToVIPBridge {
 
         require(ERC20_APM.transferFrom(msg.sender, address(this), amount), "Transfer failed");
     }
-}
+} 
