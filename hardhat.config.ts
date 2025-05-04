@@ -8,6 +8,9 @@ const config: HardhatUserConfig = {
     outDir: "typechain-types",
     target: "ethers-v6",
   },
+  paths: {
+    sources: "./contracts",
+  }
 };
 
 export default config; 
