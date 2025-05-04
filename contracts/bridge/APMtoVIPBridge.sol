@@ -4,8 +4,13 @@ pragma solidity 0.8.20;
 import {IERC20} from "../openzeppelin-contracts-5.0.0/token/ERC20/IERC20.sol";
 
 contract APMToVIPBridge {
-    IERC20 public immutable ERC20_APM = IERC20(0x8EB4029afd486f69e749ee172748582C2877aaAB);
+    IERC20 public immutable ERC20_APM;
     
+    constructor(address _apm) {
+        require(_apm != address(0), "Invalid APM address");
+        ERC20_APM = IERC20(_apm);
+    }
+
     /**
      * @notice IMPORTANT: Only events after 32 confirmations are considered valid for bridge processing
      * 
