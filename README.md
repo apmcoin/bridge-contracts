@@ -35,5 +35,5 @@ npx hardhat compile
 ```
 eth mainnet bridge  :  https://etherscan.io/address/0xa2b22a062f85c8c2dbcff92e3f4dedee0e679fa3
 eth mainnet apm     :  https://etherscan.io/token/0xC8C424B91D8ce0137bAB4B832B7F7D154156BA6c
-bsc mainnet vip     :   
+bsc mainnet vip     :  https://bscscan.com/token/0x400F9Cc49AC28F0De7141A7dA0781be136D27646
 ```
