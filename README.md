@@ -1,47 +1,50 @@
-# VIP-CONTRACTS
+# Bridge Contracts Boilerplate
 
-Smart contract collection for the VIP project.
+Base bridge contract collection for **one-way, one-time token swap** (VIP Project).
 
 ## Project Overview
 
-- Lightweight smart contract design
-- Optimized gas cost implementation
-- Compliant with global security audit standards
+- Lightweight smart contract boilerplate design  
+- Optimized gas cost implementation  
+- Fully compliant with global security audit standards  
 
 ## Contract Analysis
 
-### VIP Token Contract
-- Minimalist implementation focusing on core functionality
-- Optimal gas efficiency through simplified design
-- Implements essential ERC20 standards with Permit functionality
-- Intentional omission of complex access controls for audit optimization
-
-### Bridge Contract (APMtoVIPBridge)
-- Perfectly designed one-way migration bridge for rebranding
-- Intentionally simple to minimize attack vectors
-- Complete token balance transfer aligns with the rebranding purpose
-- No withdrawal mechanism by design, as APM tokens are meant to be permanently locked
-- Immutable contract state provides security during the migration period
-- Event emission for cross-chain verification is sufficient for the purpose
+- One-way migration bridge designed for rebranding purposes  
+- Intentionally simple to minimize attack vectors  
+- Full token balance transfer aligns with the migration/rebranding purpose  
+- No withdrawal mechanism by design (APM tokens permanently locked)  
+- Immutable contract state ensures secure migration process  
+- Event emission sufficient for cross-chain verification  
 
 ## Compilation
 
-```
+```bash
 npm install
 npx hardhat compile
+
+## License
 ```
+MIT License
 
-## On-chain info
+Copyright (c) 2025
 
-#### eth mainnet bridge
-[Etherscan](https://etherscan.io/address/0xa2b22a062f85c8c2dbcff92e3f4dedee0e679fa3#code)
-`0xa2b22a062f85c8c2dbcff92e3f4dedee0e679fa3` 
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights  
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell  
+copies of the Software, and to permit persons to whom the Software is  
+furnished to do so, subject to the following conditions:  
 
-#### eth mainnet apm
-[Etherscan](https://etherscan.io/token/0xC8C424B91D8ce0137bAB4B832B7F7D154156BA6c#code)
-`0xC8C424B91D8ce0137bAB4B832B7F7D154156BA6c`
+The above copyright notice and this permission notice shall be included in all  
+copies or substantial portions of the Software.  
 
-#### bsc mainnet vip
-[Bscscan](https://bscscan.com/token/0x400F9Cc49AC28F0De7141A7dA0781be136D27646#code)
-`0x400F9Cc49AC28F0De7141A7dA0781be136D27646`
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR  
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,  
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE  
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER  
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,  
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE  
+SOFTWARE.
 
+```
