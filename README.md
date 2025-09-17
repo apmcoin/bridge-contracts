@@ -1,6 +1,6 @@
 # Bridge Contracts Boilerplate
 
-Base bridge contract collection for **one-way, one-time token swap** (VIP Project).
+Base bridge contract collection for **one-way, one-time token swap**.
 
 ## Project Overview
 
