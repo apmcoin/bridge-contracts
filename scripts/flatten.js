@@ -6,23 +6,13 @@ task("flatten", "Flattens and prints contracts and their dependencies")
   .setAction(async () => {
     const contractsPath = path.join(__dirname, "..", "contracts");
     
-    // Flatten VIP.sol
-    console.log("Flattening VIP.sol...");
-    const flattenedVIP = await hre.run("flatten:get-flattened-sources", {
-      files: [path.join(contractsPath, "token", "VIP.sol")],
-    });
-    fs.writeFileSync(
-      path.join(__dirname, "..", "flattened", "VIP.sol"),
-      flattenedVIP
-    );
-
-    // Flatten APMtoVIPBridge.sol
-    console.log("Flattening APMtoVIPBridge.sol...");
+    // Flatten TokenBridge.sol
+    console.log("Flattening TokenBridge.sol...");
     const flattenedBridge = await hre.run("flatten:get-flattened-sources", {
-      files: [path.join(contractsPath, "bridge", "APMtoVIPBridge.sol")],
+      files: [path.join(contractsPath, "bridge", "TokenBridge.sol")],
     });
     fs.writeFileSync(
-      path.join(__dirname, "..", "flattened", "APMtoVIPBridge.sol"),
+      path.join(__dirname, "..", "flattened", "TokenBridge.sol"),
       flattenedBridge
     );
 
