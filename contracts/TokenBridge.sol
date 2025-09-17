@@ -28,6 +28,9 @@ contract TokenBridge {
      * @param receiverBEP20Address Receiver address on BSC
      */
     function bridge(address receiverBEP20Address) external {
+        // CAUTION: This contract is designed for standard ERC20 tokens.
+        // It may not be compatible with fee-on-transfer tokens, as the amount logged in the event
+        // might differ from the actual amount locked in the contract.
         require(receiverBEP20Address != address(0), "Invalid BEP20 address");
         
         uint256 amount = sourceToken.balanceOf(msg.sender);
