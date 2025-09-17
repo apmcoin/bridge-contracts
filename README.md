@@ -20,3 +20,8 @@ Base bridge contract collection for **one-way, one-time token swap**.
 ## Compilation
 
 ```
+npm install
+npx hardhat compile
+```
+
+```
